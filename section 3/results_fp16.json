@@ -1,0 +1,43 @@
+{
+  "config": "fp16",
+  "model_id": "Qwen/Qwen2.5-1.5B-Instruct",
+  "peak_memory_mb": 2966.26611328125,
+  "avg_tokens_per_sec": 23.15003607471064,
+  "results": [
+    {
+      "prompt": "Explain the difference between supervised and unsupervised learning in two sentences.",
+      "output": "Supervised learning involves training models on labeled data where each example is paired with an output label, allowing the model to learn patterns from the input-output pairs. Unsupervised learning, on the other hand, deals with unlabeled data, where the goal is to find hidden structures or relationships within the data without predefined outputs.",
+      "elapsed_sec": 4.247363980999978,
+      "n_tokens": 65,
+      "tokens_per_sec": 15.303609554247979
+    },
+    {
+      "prompt": "Write a Python function that returns the nth Fibonacci number using memoization.",
+      "output": "Certainly! The Fibonacci sequence is defined as follows:\n- F(0) = 0\n- F(1) = 1\n- For n > 1: F(n) = F(n-1) + F(n-2)\n\nMemoization can be used to optimize this recursive function by storing previously computed values in a dictionary and reusing them when needed.\n\nHere's how you could implement it:\n\n```python\ndef fibonacci_memoized(n, memo={}):\n    # Check if the result is already in the memo dictionary\n    if n in memo:\n        return memo[n]\n    \n    # Base cases\n    if n == 0:\n        return 0\n    elif n == 1:\n        return 1\n    \n    # Recursive case with memoization\n    memo[n] = fibonacci_memoized(n - 1, memo) + fibonacci_memoized(n - 2, memo)\n    return memo[n]\n\n# Example usage:\nn = 10",
+      "elapsed_sec": 7.953252437999993,
+      "n_tokens": 200,
+      "tokens_per_sec": 25.14694479511505
+    },
+    {
+      "prompt": "Summarize why retrieval-augmented generation helps reduce hallucination.",
+      "output": "Retrieval-Augmented Generation (RAG) is an approach that combines the strengths of two different techniques: retrieval and generation. The goal of RAG is to improve the quality of generated text by leveraging pre-existing knowledge from large datasets.\n\nOne key benefit of RAG is its ability to reduce hallucination. Hallucination refers to the phenomenon where a model generates text that does not align with real-world facts or common sense reasoning. This can occur when a model is trained on biased data or has limited exposure to diverse sources of information.\n\nBy using retrieval as a component of RAG, we can help mitigate this issue in several ways:\n\n1. **Improved Data Diversity**: Retrieval allows us to access a wider range of documents, including those that may contain counterfactuals or alternative perspectives. By combining these diverse sources with the output of a generative model, RAG can generate more accurate and contextually relevant responses.\n2. **Contextual Understanding**: Retrieval enables models to understand the",
+      "elapsed_sec": 8.439301001000047,
+      "n_tokens": 200,
+      "tokens_per_sec": 23.69864518119454
+    },
+    {
+      "prompt": "A customer says their food delivery order never arrived. Write a short, empathetic response as a support agent.",
+      "output": "I'm truly sorry to hear that your food didn't arrive on time. I understand how frustrating and disappointing this can be for you. Rest assured, we're here to help resolve the issue and ensure that it doesn\u2019t happen again in the future. Could you please provide me with some details about what happened so we can look into it further?",
+      "elapsed_sec": 2.7513190280000117,
+      "n_tokens": 70,
+      "tokens_per_sec": 25.442342123037758
+    },
+    {
+      "prompt": "What are the trade-offs between using FAISS and Qdrant as a vector store?",
+      "output": "FAISS (Fast Approximate Inverted Index Search) and Qdrant are both popular libraries for building vector stores, which are used to efficiently store and search large amounts of numerical vectors. Each has its own strengths and weaknesses that can be considered when choosing between them.\n\n### FAISS\n\n**Pros:**\n1. **Performance:** FAISS is known for its high performance in vector similarity searches. It uses advanced algorithms like approximate nearest neighbor (ANN) methods such as Ball Tree or KD Tree, which can provide very fast results.\n2. **Flexibility:** FAISS supports various data structures including Ball Trees, KD Trees, and R-trees, allowing you to choose the best fit for your specific use case.\n3. **Ease of Use:** The API is relatively straightforward and easy to integrate into existing projects.\n\n**Cons:**\n1. **Complexity:** While it's generally easier to use than some other options, FAISS does require more manual tuning compared to some other libraries.\n2",
+      "elapsed_sec": 8.358174120000001,
+      "n_tokens": 200,
+      "tokens_per_sec": 23.92867115814524
+    }
+  ]
+}

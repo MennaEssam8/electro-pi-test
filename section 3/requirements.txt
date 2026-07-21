@@ -1,0 +1,13 @@
+# Core
+torch>=2.2.0
+transformers>=4.44.0
+accelerate>=0.33.0
+bitsandbytes>=0.43.0
+
+# GGUF / llama.cpp
+#llama-cpp-python>=0.2.90
+huggingface-hub>=0.24.0
+
+# Measurement utilities
+psutil>=5.9.0
+tabulate>=0.9.0
