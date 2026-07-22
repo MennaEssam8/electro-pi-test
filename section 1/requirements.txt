@@ -1,0 +1,8 @@
+livekit-agents>=1.6.0
+livekit-plugins-groq>=1.6.0
+python-dotenv>=1.0.0
+
+# Uncomment if you add real STT/TTS providers for Task 1.2:
+livekit-plugins-deepgram>=1.6.0
+livekit-plugins-cartesia>=1.6.0
+# livekit-plugins-openai>=1.6.0
